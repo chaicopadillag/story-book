@@ -1,9 +1,33 @@
 {
   "name": "story-book",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "typings": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "homepage": "https://github.com/chaicopadillag/story-book",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaicopadillag/story-book.git"
+  },
+  "release": {
+    "branch": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "typescript": "^4.0.2"
+  },
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "build-storybook",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "postbuild": "copyfiles -u 1 src/**/*.css dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -21,7 +45,18 @@
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-loader": "^8.2.3",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }
