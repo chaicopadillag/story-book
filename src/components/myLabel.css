@@ -1,0 +1,38 @@
+.label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.small {
+  font-size: 10px;
+}
+.normal {
+  font-size: 14px;
+}
+.medium {
+  font-size: 18px;
+}
+.large {
+  font-size: 20px;
+}
+
+.primary {
+  color: #006eff;
+}
+.success {
+  color: #02bd40;
+}
+.secondary {
+  color: #0f0f0f;
+}
+.danger {
+  color: #ff0000;
+}
+.warning {
+  color: #ffd000;
+}
+.info {
+  color: #8400ff;
+}
+.uppercase {
+  text-transform: uppercase;
+}
