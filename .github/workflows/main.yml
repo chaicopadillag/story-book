@@ -35,5 +35,5 @@ jobs:
       - name: Semantic Release
         env:
           # The version to bump to
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
