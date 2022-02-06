@@ -29,10 +29,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Buil App
+      - name: Build App
         run: yarn build
 
-      - name: Increment version
+      - name: Semantic Release
         env:
           # The version to bump to
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
